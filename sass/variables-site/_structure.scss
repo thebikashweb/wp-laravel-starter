@@ -1,0 +1,41 @@
+//website max width
+$max-width: 1320px;
+
+//max width for some cotainer box which are smaller than max-width
+$max-width-box:1070px; 
+
+
+
+//wrapper for having padding in different screens
+.wrapper{
+
+    // Small devices
+    
+        @media (max-width: #{$screen-sm-min}) {
+            padding:0px 20px!important;
+            
+        }
+     // Medium devices
+     
+        @media (max-width: #{$screen-md-min}) {
+            padding:0px 40px;
+        }
+    
+     
+     // Large devices
+    
+        @media (max-width: #{$screen-lg-min}) {
+            padding:0px 40px;
+        }
+    
+     
+     // Extra large devices
+     
+        @media (max-width: #{$screen-xl-min}) {
+            padding:0px 40px;
+        }
+        @media (min-width: 1261px) {
+            padding:0px 40px;
+        }
+    
+    }

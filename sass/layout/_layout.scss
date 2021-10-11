@@ -1,0 +1,23 @@
+
+
+@media screen and (min-width:#{$screen-sm-min}){
+    .container, .container-md, .container-sm{
+        max-width:96%;
+    }
+}
+
+@media screen and (max-width:#{$screen-md-min}){
+    .container, .container-md, .container-sm{
+        max-width:95%;
+    }
+}
+@media screen and (max-width:#{$screen-lg-min}){
+    .container, .container-md, .container-sm{
+        max-width:95%;
+    }
+}
+@media screen and (max-width:#{$screen-xl-min}){
+    .container, .container-md, .container-sm{
+        max-width:90%;
+    }
+}

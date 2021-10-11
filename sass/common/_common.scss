@@ -1,0 +1,46 @@
+//bootstrap override
+
+.row{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+
+
+/****----margin-padding---**/
+
+//section top margin top 
+@for $i from 1 through 7 {
+    .section-margin-top-#{$i}x {
+      margin-bottom: #{$i * 3}rem;
+    }
+  }
+//section bottom
+@for $i from 1 through 7 {
+    .section-margin-bottom-#{$i}x {
+      margin-bottom: #{$i * 3}rem;
+    }
+  }
+/**---- Custom override----**/
+
+a {
+	text-decoration: none;	
+	transition: all 0.1s;
+	&:hover{
+		
+	}
+}
+.max-width{
+    max-width: $max-width;
+    margin-left:auto!important;
+    margin-right:auto!important;
+}
+
+//show hide toggle class
+
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}

@@ -1,0 +1,25 @@
+.breadcrumbs{
+    margin-top:7rem;
+    font-size: 0.875rem;    
+    
+    height: 50px;
+    display: flex;
+    align-items: center;  
+    a, a:visited, a:active {
+        color: lighten($color: $color_primary, $amount: 10);
+        text-decoration: none;
+    }
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-size: 0.875rem;
+        
+    }
+    p span a{
+        border-bottom: 1px solid $color_primary;
+       
+    }
+    span.breadcrumb_last {
+        border-bottom: 0px solid $color_primary;
+    }
+}

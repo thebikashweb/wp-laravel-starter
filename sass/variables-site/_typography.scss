@@ -1,0 +1,130 @@
+@font-face {
+	font-family: GT Eesti Pro ;
+	src: url(../../public/css/fonts/GT-Eesti-Pro-Display-Light.woff);
+	font-weight: 400;
+}
+@font-face {
+	font-family: GT Eesti Pro ;
+	src: url(../../public/css/fonts/GT-Eesti-Pro-Display-Bold.woff);
+	font-weight: 700;
+}
+
+
+//font family
+$font-family-abril: 'Abril Fatface';
+$font-family-gte-eesti: 'GT Eesti Pro';
+
+
+body,
+button,
+input,
+select,
+textarea {
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,a,p {
+	font-family: $font-family-gte-eesti;
+	padding:0px;
+	margin:0px;
+
+}
+
+
+
+
+h1 {
+	font-size:4rem;	
+	font-family: $font-family-gte-eesti;
+	font-weight: 700;
+	
+}
+
+h2 {
+	font-size:2.8rem;	
+	font-family: $font-family-gte-eesti;
+}
+
+h3 {
+	font-size:2.2rem;
+	font-family: $font-family-gte-eesti;
+}
+h4 {
+	font-size:1.75rem;
+	font-family: $font-family-gte-eesti;
+}
+h5 {
+	font-size:1.5rem;
+	font-family: $font-family-gte-eesti;
+}
+h6 {
+	font-size:1.25rem;
+	font-family: $font-family-gte-eesti;
+}
+
+p {	
+	font-size: 1rem;
+	font-family: $font-family-gte-eesti;
+}
+
+
+
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: 'Courier 10 Pitch', Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

@@ -1,0 +1,426 @@
+.header-light {	
+    position: fixed; 
+    top:0;
+    left:0;
+    width: 100%; 
+    z-index: 99;
+    height:4.25rem;
+    padding-top:2rem;  
+    margin:auto; 
+    nav{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $max-width;
+       
+    }
+    // if you change menu name in Dashboard to something else, please change this class name accordingly
+	.menu-top-nav-menu-container {
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+            align-items: center; 
+            .dropdown-toggle::after{
+                margin-left:-18px;
+                margin-top:10px;
+                margin-right:20px;
+                color:$color_white;
+                font-size: 10px;                
+            }
+            li{
+                position: relative;
+                
+                &.menu-item-has-children:hover{
+                    @media screen and (min-width:769px){
+
+                        .sub-menu{
+                            display: flex;
+                            position:absolute;
+                            flex-direction: column;
+                            background-color: $color_primary;
+                            padding:20px;
+                            top: 100%;
+                            left: -28px;
+                            width: 205px;
+                            li{
+                                margin-bottom:20px;
+                            }
+                            li a:hover{
+                             
+                            
+                            }
+    
+                        }
+                    }
+                }    
+            }           
+			li a {
+				text-decoration: none;
+				color: $color_white;
+                font-size:0.8rem;
+                font-weight: 700;
+                margin-right:20px;
+                position: relative;
+                &:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $color_white;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  } 
+                            
+				
+			}
+            .current-menu-item li a{
+                color:red;
+            }
+            
+            .current_page_item.dropdown-toggle::after{
+                
+                
+                             
+            }
+            //for submenu
+            .sub-menu{
+               display:none;
+            }
+
+            
+		}
+        @media screen and (max-width:#{$screen-md-min}){
+            position: absolute;
+            top: 0px;
+            display: flex;
+            right: -41px;
+            flex-direction: row;
+            width: 50%;
+            background-color:$color_primary;
+            height:100vh;
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+            ul {
+                display: flex;
+                flex-direction:column;
+                align-items:flex-start;
+                height:20%;
+                justify-content:space-between;
+                .dropdown-toggle::after{
+                   display: none;              
+                }
+                li{
+                    margin-bottom:16px;
+                    position: relative;
+                    
+                    &.menu-item-has-children,&.menu-item-has-children:hover{
+                        
+                        .sub-menu{
+                            display: flex;
+                            margin-top:10px;
+                            margin-left:5px;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            background-color: $color_primary;
+                            li:before{
+                                content: '-';
+                                font-size: 20px;
+                                color:$color_white;
+                            }
+                        }
+                  
+                }                
+            }                
+                li a {
+                    transition:all 0.5s ease-in-out;
+                    opacity:0;                 
+                    
+                }
+            }
+            ul#menu-top-nav-menu {
+                margin: 20px auto;
+            }
+            
+        }
+        @media screen and (max-width:#{$screen-md-min}){
+            width:60%;
+        }
+       
+	}
+    //active nav in mobile
+    .nav-active{
+        transform: translateX(0%);
+        ul li a{
+            opacity:1;
+        }
+       
+    }
+    
+    .navbar{
+          
+        &__logo{
+            img{
+                height:40px;
+            }
+            
+        }
+    }
+    
+ //mobile menu responsive
+
+//mobile navbar active
+
+.mobile-menu{
+    cursor:pointer;
+    div{
+        width:30px;
+        height:3px;
+        color:$color_white;
+        margin:7px;
+        background-color:$color_white;
+        border-radius:5px;
+        
+        transition:all 0.3s;
+    }
+    @media screen and (min-width:#{$screen-md-min}){
+        display:none;
+    }
+}
+.nav-active{
+    .line1{
+        transform: rotate(-45deg) translate(-8px, 10px);
+    }
+    .line2{
+        opacity:0;
+    }
+    .line3{
+        transform: rotate(45deg) translate(-4px, -5px);
+    }
+}    
+}
+
+
+
+
+
+// for header dark theme
+
+.header-dark {	
+    position: fixed; 
+    top:0;
+    left:0;
+    width: 100%; 
+    z-index: 99;
+    height:4.25rem;
+    padding-top:2rem;  
+    margin:auto;     
+    nav{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $max-width;
+        border-bottom: 1px solid grey;
+    }
+    // if you change menu name in Dashboard to something else, please change this class name accordingly
+	.menu-top-nav-menu-container {
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+            align-items: center; 
+            .dropdown-toggle::after{
+                margin-left:-18px;
+                margin-top:10px;
+                margin-right:20px;
+                color:$color_primary;
+                font-size: 10px;                
+            }
+            li{
+                position: relative;
+                
+                &.menu-item-has-children:hover{
+                    @media screen and (min-width:769px){
+
+                        .sub-menu{
+                            display: flex;
+                            position:absolute;
+                            flex-direction: column;
+                            background-color: $color_primary;
+                            padding:20px;
+                            top: 100%;
+                            left: -28px;
+                            width: 205px;
+                            li{
+                                margin-bottom:20px;
+                            }
+                            li a:hover{
+                             
+                            
+                            }
+    
+                        }
+                    }
+                }    
+            }           
+			li a {
+				text-decoration: none;
+				color: $color_primary;
+                font-size:0.8rem;
+                font-weight: 700;
+                margin-right:20px;
+                position: relative;
+                &:after {    
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background: $color_primary;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                  }
+                  &:hover:after { 
+                    width: 100%; 
+                    left: 0; 
+                  } 
+                            
+				
+			}
+            .current_page_item a{
+                
+            }
+            .current_page_item.dropdown-toggle::after{
+                
+                
+                             
+            }
+            //for submenu
+            .sub-menu{
+               display:none;
+            }
+
+            
+		}
+        @media screen and (max-width:#{$screen-md-min}){
+            position: absolute;
+            top: 55px;
+            display: flex;
+            right: -41px;
+            flex-direction: row;
+            width: 50%;
+            background-color:$color_primary;
+            height:100vh;
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+            ul {
+                display: flex;
+                flex-direction:column;
+                align-items:flex-start;
+                height:20%;
+                justify-content:space-between;
+                .dropdown-toggle::after{
+                   display: none;              
+                }
+                li{
+                    margin-bottom:16px;
+                    position: relative;
+                    
+                    &.menu-item-has-children,&.menu-item-has-children:hover{
+                        
+                        .sub-menu{
+                            display: flex;
+                            margin-top:10px;
+                            margin-left:5px;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            background-color: $color_primary;
+                            li:before{
+                                content: '-';
+                                font-size: 20px;
+                                color:$color_primary;
+                            }
+                        }
+                  
+                }                
+            }                
+                li a {
+                    transition:all 0.5s ease-in-out;
+                    opacity:0;                 
+                    
+                }
+            }
+            ul#menu-top-nav-menu {
+                margin: 20px auto;
+            }
+            
+        }
+        @media screen and (max-width:#{$screen-md-min}){
+            width:60%;
+        }
+       
+	}
+    //active nav in mobile
+    .nav-active{
+        transform: translateX(0%);
+        ul li a{
+            opacity:1;
+        }
+       
+    }
+    
+    .navbar{
+          
+        &__logo{
+            img{
+                height:40px;
+            }
+            
+        }
+    }
+    //mobile menu responsive
+
+//mobile navbar active
+
+.mobile-menu{
+    cursor:pointer;
+    div{
+        width:30px;
+        height:3px;
+        color:$color_white;
+        margin:7px;
+        background-color:$color_white;
+        border-radius:5px;
+        
+        transition:all 0.3s;
+    }
+    @media screen and (min-width:#{$screen-md-min}){
+        display:none;
+    }
+}
+.nav-active{
+    .line1{
+        transform: rotate(-45deg) translate(-8px, 10px);
+    }
+    .line2{
+        opacity:0;
+    }
+    .line3{
+        transform: rotate(45deg) translate(-4px, -5px);
+    }
+} 
+    
+}

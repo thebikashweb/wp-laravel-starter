@@ -1,0 +1,15 @@
+.btn{    
+    padding: 1rem 1.5rem;    
+    border-radius:1.5rem;
+    text-decoration: none;  
+    display: inline-flex;
+    align-items: center; 
+    text-align: center;  
+    justify-content: center;    
+    
+    a{text-align: center;}   
+    cursor: pointer;
+    i{
+        margin-left:10px;
+    }
+}
